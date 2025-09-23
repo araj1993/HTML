@@ -1,0 +1,149 @@
+<!-- Tour Registration Form -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tour Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-image: url('/images/homepage.jpg');
+            background-size: cover;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .inline-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .inline-group label {
+            font-weight: normal;
+        }
+
+        input[type="submit"] {
+            background-color: #0080ff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tour Registration Form</h1>
+    <form action="/submit_registration" method="post">
+        <div class="form-group">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="sname">Last Name:</label>
+            <input type="text" id="sname" name="sname" placeholder="Last Name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="E-mail" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        </div>
+
+        <div class="form-group">
+            <label>Contact Details:</label>
+            <div class="inline-group">
+                <input type="radio" id="ph" name="phone_type" value="ph" required>
+                <label for="ph">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter phone number" required oninvalid="this.setCustomValidity('Please enter a 10-digit phone number')" oninput="this.setCustomValidity('')">
+            </div>
+            <div class="inline-group">
+                <input type="radio" id="mobile" name="phone_type" value="mobile">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile_num" name="mobile_num" pattern="[0-9]{10}" placeholder="Enter mobile number" required oninvalid="this.setCustomValidity('Please enter a 10-digit mobile number')" oninput="this.setCustomValidity('')">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Tour Type:</label>
+            <div class="inline-group">
+                <input type="checkbox" id="adventure" name="tour_type" value="adventure">
+                <label for="adventure">Adventure</label>
+
+                <input type="checkbox" id="cultural" name="tour_type" value="cultural">
+                <label for="cultural">Cultural</label>
+
+                <input type="checkbox" id="nature" name="tour_type" value="nature">
+                <label for="nature">Nature</label>
+
+                <input type="checkbox" id="historical" name="tour_type" value="historical">
+                <label for="historical">Historical</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="tour_date">Preferred Date:</label>
+            <input type="date" id="tour_date" name="tour_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pickup">Pickup Location:</label>
+            <select id="pickup" name="pickup" required>
+                <option value="">Select a location</option>
+                <option value="central_station">Central Station</option>
+                <option value="city_mall">City Mall</option>
+                <option value="university_gate">University Gate</option>
+                <option value="airport_terminal">Airport Terminal</option>
+                <option value="bus_depot">Bus Depot</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
