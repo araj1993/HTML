@@ -1,0 +1,66 @@
+body {
+  /* Add heading style */
+  font-family: Arial, sans-serif;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.calculator {
+  background-image: url("../images/cal_bg.png");
+  padding: 20px;
+  width: 320px;
+}
+
+#display {
+  width: 93%;
+  height: 40px;
+  font-size: 1.5em;
+  text-align: right;
+  margin-bottom: 2px;
+  padding: 10px;
+  border: 2px solid #0368ba;
+  border-radius: 13px;
+  background-color: #e6ebf0;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 50fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+button {
+  font-size: 1.2em;
+  padding: 15px;
+  background-color: #aebfee;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #4875f1;
+}
+
+button:nth-child(4n) {
+  background-color: #1261f2;
+  color: white;
+}
+
+button:nth-child(4n):hover {
+  background-color: #8abbe3;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 1.5em;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
