@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <style> 
+         #planetImage { 
+            background: url('/images/index.png')   center center; 
+            background-repeat: no-repeat;			   
+            background-size: cover; 
+            content: ''; 
+            position: static; 
+            animation: spin 25s linear infinite; 
+            width: 50vw; 
+            height: 50vw; 
+         } 
+         @keyframes spin { 
+             100% { transform: rotate(360deg); } 
+         } 
+         body { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+         } 
+
+       </style>
+    </head>
+
+    <body>
+      <div>
+        <div>
+         <a href="index.html">
+            <button
+               style=" font-size: 40px; 
+                  background: rgb(221, 204, 8);
+                  color:rgb(10, 10, 10);
+                  font-family: sans-serif;
+                  border-radius: 25px;     
+                  border: 2px solid rgb(236, 233, 240);    
+                  width: 600px; 
+                  height: 70px;
+                  text-align: center;
+                  line-height: initial;
+                  border-width: 1px 1px 3px"> KNOW A PLANET 
+            </button> 
+         </a>
+           
+      </div>
+      <br>
+      <button 
+         onclick="redirectPlanet()" 
+         id="submitButton" 
+         style="
+            float: right;
+            background-color: #080908;
+            color: white;
+            font-family: 'Ubuntu';
+            border-radius: 25px;
+            border: 2px solid rgb(243, 237, 237);
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            font-size: 24px;
+            cursor: pointer;">
+            Search a Planet
+      </button>
+
+      <div style="overflow: hidden; padding-right: .5em;"> 
+         <input type="number" id="planetID" name="number"
+            min="1" max="8"
+            style="width: 100%;
+                  background-color: rgb(169, 161, 161);
+                  text-align: center; 
+                  border-radius: 25px;     
+                  border: 2px solid rgb(239, 232, 232);    
+                  padding: 20px;
+                  font-size: 24px;" />
+      </div>
+
+      <script>
+         function redirectPlanet() {
+            const planetID = document.getElementById('planetID').value.trim();
+
+            const planetPages = {
+               '1': 'mercury.html',
+               '2': 'venus.html',
+               '3': 'earth.html',
+               '4': 'mars.html',
+               '5': 'jupiter.html',
+               '6': 'saturn.html',
+               '7': 'uranus.html',
+               '8': 'neptune.html'
+            };
+
+            if (planetPages[planetID]) {
+               window.location.href = planetPages[planetID];
+            } else {
+               alert('Please enter a number between 1 and 8 to view a planet.');
+            }
+         }
+      </script>
+
+         <br>
+
+      </div>
+      <div  id="planetImage">  
+      </div>
+
+   </body>
+</html>
