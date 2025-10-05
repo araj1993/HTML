@@ -1,0 +1,146 @@
+<!-- 
+<div> element - block-level container  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div Element Example</title>
+</head>
+<style>
+    div {
+        border: 1px solid #000;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .my_container{
+        float: left;
+        background-color: lightgrey;
+    }
+    .inline{
+        display: inline;
+        background-color:chocolate;
+    }
+    #flex{
+        display: flex;
+        background-color: lightgreen;
+    }
+</style>
+<body>
+    <!-- <div> element -->
+    <p>1. Mary had a <div>little lamp</div></p>
+
+    <!-- <div> element as a container -->
+    <p>2. div can also be used as a container</p>
+    <div>
+        <h2>This is a heading inside a div</h2>
+        <p>This is a paragraph inside the same div</p>
+        <p>Another paragraph inside the same div</p>
+    </div>
+
+    <!-- center aligning a <div> element -->
+    <p>3. Center aligning a div element</p>
+    <div style="text-align:center;">This div is center aligned</div>
+
+    <!-- Multiple <div> elements -->
+    <p>4. Multipe div elements</p>    
+    <div style="background-color: aqua;">This is the first div</div>
+    <div style="background-color: aquamarine;">This is the second div</div>
+    <div style="background-color: lightpink;">This is the third div</div>
+
+    <!-- Floating div elements - block -->
+    <p>5. Floating div elements</p>
+    <div class="my_container">This is a floated div</div>
+    <div class="my_container">This is another floated div</div>
+    <div class="my_container">This is yet another floated div</div>
+    <div style="clear: both;">Clearing the floats</div>
+
+    <!-- Floating div elements - inline -->
+    <p>6. Floating div elements - inline</p>
+    <div class="inline">This is a floated div</div>
+    <div class="inline">This is another floated div</div>
+    <div class="inline">This is yet another floated div</div>
+
+    <!-- CSS FLEX -->
+    <p>7. Flex elements</p>
+    <div id="flex">
+        <div style="margin: 10px; padding: 10px; background-color: coral;">Flex Item 1</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightblue;">Flex Item 2</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightcoral;">Flex Item 3</div>
+    </div>
+    
+    <!-- <div>Flex box  </div> -->
+    <p>7(a) Flex box</p>
+    <div style="display: flex; border: 2px solid black;">
+        <div style="margin: 10px; padding: 10px; background-color: coral;">Flex Item 1</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightblue;">Flex Item 2</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightcoral;">Flex Item 3</div>
+    </div>
+    <p>7(b) Flex box vertically</p>
+    <div style="display:flex; flex-direction: column; border: 2px solid black;">
+        <div style="margin: 10px; padding: 10px; background-color: coral;">Flex Item 1</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightblue;">Flex Item 2</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightcoral;">Flex Item 3</div>   
+    </div>
+    <p>7(c) flex box from right to left</p>
+    <div style="display: flex; flex-direction: row-reverse; border: 2px solid black;">
+        <div style="margin: 10px; padding: 10px; background-color: coral;">Flex Item 1</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightblue;">Flex Item 2</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightcoral;">Flex Item 3</div>
+    </div>
+   <p> 7(d) flex box coloumn reverse</p>
+   <div style="display: flex; flex-direction: column-reverse; border: 2px solid black;">
+        <div style="margin: 10px; padding: 10px; background-color: coral;">Flex Item 1</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightblue;">Flex Item 2</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightcoral;">Flex Item 3</div>
+    </div>
+    <p>7(e) flex no wrap</p>
+    <div style="display: flex; flex-wrap: nowrap; border: 2px solid black;">
+        <div style="margin: 10px; padding: 10px; background-color: coral; flex: 1 1 200px;">Flex Item 1</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightblue; flex: 1 1 200px;">Flex Item 2</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightcoral; flex: 1 1 200px;">Flex Item 3</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightgreen; flex: 1 1 200px;">Flex Item 4</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightpink; flex: 1 1 200px;">Flex Item 5</div>   
+        <div style="margin: 10px; padding: 10px; background-color: lightgrey; flex: 1 1 200px;">Flex Item 6</div>
+    </div>
+    <p>7(f) flex wrap if necessary</p>
+    <div style="display: flex; flex-wrap: wrap; border: 2px solid black;">
+        <div style="margin: 10px; padding: 10px; background-color: coral; flex: 1 1 200px;">Flex Item 1</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightblue; flex: 1 1 200px;">Flex Item 2</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightcoral; flex: 1 1 200px;">Flex Item 3</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightgreen; flex: 1 1 200px;">Flex Item 4</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightpink; flex: 1 1 200px;">Flex Item 5</div>   
+        <div style="margin: 10px; padding: 10px; background-color: lightgrey; flex: 1 1 200px;">Flex Item 6</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightyellow; flex: 1 1 200px;">Flex Item 7</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightcyan; flex: 1 1 200px;">Flex Item 8</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightgoldenrodyellow; flex: 1 1 200px;">Flex Item 9</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightseagreen; flex: 1 1 200px;">Flex Item 10</div>
+        </div>  
+    <p>7(g) flex wrap reverse</p>
+    <div style="display: flex; flex-wrap: wrap-reverse; border: 2px solid black;">
+        <div style="margin: 10px; padding: 10px; background-color: coral; flex: 1 1 200px;">Flex Item 1</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightblue; flex: 1 1 200px;">Flex Item 2</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightcoral; flex: 1 1 200px;">Flex Item 3</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightgreen; flex: 1 1 200px;">Flex Item 4</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightpink; flex: 1 1 200px;">Flex Item 5</div>   
+        <div style="margin: 10px; padding: 10px; background-color: lightgrey; flex: 1 1 200px;">Flex Item 6</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightyellow; flex: 1 1 200px;">Flex Item 7</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightcyan; flex: 1 1 200px;">Flex Item 8</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightgoldenrodyellow; flex: 1 1 200px;">Flex Item 9</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightseagreen; flex: 1 1 200px;">Flex Item 10</div>
+    </div>
+    
+    <!-- CSS Flex Containers -->
+    <p>8. Flex Containers</p>
+    <div style="display: flex; justify-content: center; border: 2px solid black; flex-basis: auto;">
+        <div style="margin: 10px; padding: 10px; background-color: coral; order: 3;">Flex Item 1</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightblue; order: 1; flex-shrink: 1;">Flex Item 2</div>
+        <div style="margin: 10px; padding: 10px; background-color: lightcoral; order: 2; flex-grow: 7;">Flex Item 3</div>
+        <!-- grow, shrink and basis -->
+        <div style="margin: 10px; padding: 10px; background-color: lightgreen; order: 4; flex: 0 0 200px;">Flex Item 4</div>
+    </div>
+    
+</body>
+</html>
