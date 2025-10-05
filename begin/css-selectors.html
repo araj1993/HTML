@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head> 
+<style>
+    p {
+        background-color: lightblue;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    #id_selector {
+        color: green;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: lightseagreen;
+    }
+    .class_selector {
+        font-size: medium;
+        position: static;
+        background-color: lightpink;
+    }
+    .class_selector2 {
+        background-color: lightyellow;
+    }
+    p.pclass_selector {
+        font-size: large;
+        position: static;
+        background-color: lightcoral;
+    }
+    * {
+        background-color: rgb(233, 187, 235);
+    }
+    h1, h2 {
+        color-scheme: dark;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;     
+    }
+</style>
+<title>Internal CSS Example</title>    
+<body>
+    <div>
+        <h3>1. Element selector</h3>
+        <p>This is an example of using internal CSS to style an HTML document</p>
+    </div>
+    <div>
+        <h3>2. ID selector</h3>
+        <p id="id_selector">This paragraph is styled using an ID selector</p>
+    </div>
+    <div>
+        <h3>3. Class selector</h3>
+        <p class="class_selector">This paragraph is styled using a class selector</p>
+        <p class="pclass_selector">This paragraph shows element effected by class selector</p>
+        <p class="class_selector class_selector2">This paragraph is styled using multiple class selectors</p>
+    </div>
+    <div>
+        <h3>4. Universal selector</h3>
+        <p>This paragraph is styled using the universal selector</p>
+    </div>
+    <div class="h1,h2">
+        <h3>5. Grouping selector</h3>
+        <h1 style="text-align: center;">Heading 1</h1>
+        <h2 style="text-align: center;">Heading 2</h2>
+    </div>      
+</body>
+
+</html>
